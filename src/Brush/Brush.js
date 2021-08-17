@@ -13,18 +13,35 @@ export default class Brush {
         this.selected = selected
 
         var mousedown = false
+        var mouse = {}
 
-        window.onmousedown = () => { mousedown = true }
-        window.onmouseup = () => { mousedown = false }
-        window.onmousemove = event => {
-            if (mousedown) world.fill(new Vector2((event.clientX / 6) - (this.size / 2), (event.clientY / 6) - (this.size / 2)), new Vector2((event.clientX / 6) + (this.size / 2), (event.clientY / 6) + (this.size / 2)), this.selected)
+        window.onmousedown = event => {
+            mouse = event
+            mousedown = true
         }
+        window.onmouseup = event => {
+            mouse = event
+            mousedown = false
+        }
+        window.onmousemove = event => { mouse = event }
+
+        setInterval(() => {
+            if (mousedown) world.fill(new Vector2((mouse.clientX / 6) - (this.size / 2), (mouse.clientY / 6) - (this.size / 2)), new Vector2((mouse.clientX / 6) + (this.size / 2), (mouse.clientY / 6) + (this.size / 2)), this.selected)
+        }, 1)
 
         window.onkeypress = event => {
-            if (event.code == "Digit0") this.selected = new AirTile()
-            if (event.code == "Digit1") this.selected = new SandTile()
-            if (event.code == "Digit2") this.selected = new WaterTile()
-            if (event.code == "Digit3") this.selected = new HeliumTile()
+            console.log(event.key)
+
+            if (event.key == "0") this.selected = new AirTile()
+            else if (event.key == "1") this.selected = new SandTile()
+            else if (event.key == "2") this.selected = new WaterTile()
+            else if (event.key == "3") this.selected = new HeliumTile()
+
+            if (event.key == "+") this.size++
+            if (event.key == "-") this.size--
+
+            if (this.size < 2) this.size = 1
+            if (this.size > 20) this.size = 20
         }
     }
 }
