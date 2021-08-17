@@ -22,7 +22,7 @@ export default class Renderer {
 
                 app.stats.tiles++
 
-                var newsprite = new PIXI.Sprite.from("../../assets/" + tile.name + ".png")
+                var newsprite = new PIXI.Sprite.from("./../../assets/" + tile.name + ".png")
                 newsprite.x = x * (app.view.width / world.width) * 2
                 newsprite.y = y * (app.view.height / world.height) * 2
                 newsprite.scale.x = (1 / world.height) * 2
