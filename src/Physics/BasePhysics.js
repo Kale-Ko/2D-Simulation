@@ -5,11 +5,6 @@ export default class BasePhysics {
     get dir() { return 0 }
 
     baseUpdate(world, tile, pos) {
-        // if (world.get(new Vector2(pos.x, pos.y + this.dir)) != undefined && world.get(new Vector2(pos.x, pos.y + this.dir)).mass < tile.mass) {
-        //     world.set(new Vector2(pos.x, pos.y), world.get(new Vector2(pos.x, pos.y + this.dir)))
-        //     world.set(new Vector2(pos.x, pos.y + this.dir), tile)
-        // }
-
         if (world.get(new Vector2(pos.x, pos.y + this.dir)) == undefined || world.get(new Vector2(pos.x, pos.y + this.dir)).name == "air") {
             world.set(pos, new AirTile())
             world.set(new Vector2(pos.x, pos.y + this.dir), tile)

@@ -16,7 +16,9 @@ export default class Brush {
 
         window.onmousedown = () => { mousedown = true }
         window.onmouseup = () => { mousedown = false }
-        window.onmousemove = event => { if (mousedown) world.fill(new Vector2((event.clientX / 6) - (this.size / 2), (event.clientY / 6) - (this.size / 2)), new Vector2((event.clientX / 6) + (this.size / 2), (event.clientY / 6) + (this.size / 2)), this.selected) }
+        window.onmousemove = event => {
+            if (mousedown) world.fill(new Vector2((event.clientX / 6) - (this.size / 2), (event.clientY / 6) - (this.size / 2)), new Vector2((event.clientX / 6) + (this.size / 2), (event.clientY / 6) + (this.size / 2)), this.selected)
+        }
 
         window.onkeypress = event => {
             if (event.code == "Digit0") this.selected = new AirTile()

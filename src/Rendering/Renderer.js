@@ -2,7 +2,9 @@ import Vector2 from "../Misc/Vector2.js"
 
 export default class Renderer {
     constructor(app, world, fps) {
-        setInterval(() => { this.render(app, world) }, 1000 / fps)
+        setInterval(() => {
+            this.render(app, world)
+        }, 1000 / fps)
     }
 
     render(app, world) {

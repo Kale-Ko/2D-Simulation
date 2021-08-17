@@ -48,9 +48,7 @@ export default class LiquidPhysics extends BasePhysics {
     onGround(world, tile, pos) {
         var onGround = true
 
-        for (var y = pos.y; y < world.height; y++) {
-            if (world.get(new Vector2(pos.x, y)).type != "solid" && world.get(new Vector2(pos.x, y)).type != "liquid") onGround = false
-        }
+        for (var y = pos.y; y < world.height; y++) { if (world.get(new Vector2(pos.x, y)).type != "solid" && world.get(new Vector2(pos.x, y)).type != "liquid") onGround = false }
 
         return onGround
     }

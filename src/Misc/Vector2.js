@@ -7,7 +7,9 @@ export default class Vector2 {
         this.y = y
     }
 
-    get() { return { x: this.x, y: this.y } }
+    get() {
+        return { x: this.x, y: this.y }
+    }
 
     set(x, y) {
         this.x = x

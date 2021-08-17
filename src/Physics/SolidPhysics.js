@@ -24,9 +24,7 @@ export default class SolidPhysics extends BasePhysics {
     onGround(world, tile, pos) {
         var onGround = true
 
-        for (var y = pos.y; y < world.height; y++) {
-            if (world.get(new Vector2(pos.x, y)).type != "solid") onGround = false
-        }
+        for (var y = pos.y; y < world.height; y++) { if (world.get(new Vector2(pos.x, y)).type != "solid") onGround = false }
 
         return onGround
     }
