@@ -48,9 +48,7 @@ export default class GasPhysics extends BasePhysics {
     onGround(world, tile, pos) {
         var onGround = true
 
-        for (var y = pos.y; y >= 0; y--) {
-            if (world.get(new Vector2(pos.x, y)).type != "gas" || world.get(new Vector2(pos.x, y)).name == "air") onGround = false
-        }
+        for (var y = pos.y; y >= 0; y--) { if (world.get(new Vector2(pos.x, y)).type != "gas" || world.get(new Vector2(pos.x, y)).name == "air") onGround = false }
 
         return onGround
     }

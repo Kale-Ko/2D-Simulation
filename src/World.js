@@ -7,6 +7,7 @@ export default class World {
     _height
 
     get grid() { return this._grid }
+
     get width() { return this._width }
     set width(width) {
         this._width = width
@@ -49,6 +50,7 @@ export default class World {
     clone() {
         var clone = new World(this.width, this.height)
         clone._grid = new Map(this.grid)
+
         return clone
     }
 
