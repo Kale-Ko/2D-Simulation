@@ -1,6 +1,7 @@
 import Vector2 from "../Misc/Vector2.js"
 import AirTile from "../Tiles/Air.js"
 import SandTile from "../Tiles/Sand.js"
+import WoodTile from "../Tiles/Wood.js"
 import WaterTile from "../Tiles/Water.js"
 import HeliumTile from "../Tiles/Helium.js"
 
@@ -34,8 +35,9 @@ export default class Brush {
 
             if (event.key == "0") this.selected = new AirTile()
             else if (event.key == "1") this.selected = new SandTile()
-            else if (event.key == "2") this.selected = new WaterTile()
-            else if (event.key == "3") this.selected = new HeliumTile()
+            else if (event.key == "2") this.selected = new WoodTile()
+            else if (event.key == "3") this.selected = new WaterTile()
+            else if (event.key == "4") this.selected = new HeliumTile()
 
             if (event.key == "+") this.size++
             if (event.key == "-") this.size--
