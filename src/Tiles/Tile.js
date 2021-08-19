@@ -15,4 +15,6 @@ export default class Tile {
 
     get flammable() { return false }
     get explosive() { return false }
+
+    temperature = this.heat
 }
