@@ -4,6 +4,8 @@ export default class AirTile extends Tile {
     get name() { return "air" }
     get type() { return "gas" }
 
+    get color() { return 0xffffff }
+
     get mass() { return 0 }
 
     get heat() { return 0 }

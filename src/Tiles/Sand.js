@@ -4,6 +4,8 @@ export default class SandTile extends Tile {
     get name() { return "sand" }
     get type() { return "solid" }
 
+    get color() { return 0xffcc00 }
+
     get mass() { return 1 }
 
     get heat() { return 0 }

@@ -2,6 +2,8 @@ export default class Tile {
     get name() { return "tile" }
     get type() { return "none" }
 
+    get color() { return 0xffffff }
+
     get mass() { return 0 }
 
     get heat() { return 0 }

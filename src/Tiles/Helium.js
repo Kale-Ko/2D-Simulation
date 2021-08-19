@@ -4,6 +4,8 @@ export default class HeliumTile extends Tile {
     get name() { return "helium" }
     get type() { return "gas" }
 
+    get color() { return 0xaaaaaa }
+
     get mass() { return -1 }
 
     get heat() { return 0 }
