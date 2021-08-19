@@ -4,6 +4,8 @@ export default class WaterTile extends Tile {
     get name() { return "water" }
     get type() { return "liquid" }
 
+    get color() { return 0x00aaff }
+
     get mass() { return 0.8 }
 
     get heat() { return 0 }
