@@ -13,7 +13,7 @@ export default class WaterTile extends Tile {
     get meltsat() { return 0 }
 
     get evaporable() { return true }
-    get evaporatesat() { return 2 }
+    get evaporatesat() { return 12 }
 
     get flammable() { return false }
     get explosive() { return false }

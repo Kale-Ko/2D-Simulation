@@ -3,7 +3,8 @@ import AirTile from "../Tiles/Air.js"
 import SandTile from "../Tiles/Sand.js"
 import WoodTile from "../Tiles/Wood.js"
 import WaterTile from "../Tiles/Water.js"
-import HeliumTile from "../Tiles/Helium.js"
+import FireTile from "../Tiles/Fire.js"
+import SmokeTile from "../Tiles/Smoke.js"
 
 export default class Brush {
     size
@@ -37,7 +38,8 @@ export default class Brush {
             else if (event.key == "1") this.selected = new SandTile()
             else if (event.key == "2") this.selected = new WoodTile()
             else if (event.key == "3") this.selected = new WaterTile()
-            else if (event.key == "4") this.selected = new HeliumTile()
+            else if (event.key == "4") this.selected = new FireTile()
+            else if (event.key == "5") this.selected = new SmokeTile()
 
             if (event.key == "+") this.size++
             if (event.key == "-") this.size--

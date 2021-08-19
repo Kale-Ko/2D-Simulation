@@ -1,7 +1,7 @@
 import Tile from "./Tile.js"
 
-export default class HeliumTile extends Tile {
-    get name() { return "helium" }
+export default class SmokeTile extends Tile {
+    get name() { return "smoke" }
     get type() { return "gas" }
 
     get color() { return 0xaaaaaa }
