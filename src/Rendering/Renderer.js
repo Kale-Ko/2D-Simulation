@@ -24,11 +24,7 @@ export default class Renderer {
 
                 app.stats.tiles++
 
-                var square = new PIXI.Geometry()
-                square.addAttribute("positions", [0, 0, 12, 0, 12, 12, 0, 12], 2)
-                square.addAttribute("uvs", [0, 0, 1, 0, 1, 1, 0, 1], 2)
-                square.addIndex([0, 1, 2, 1, 3, 2])
-                var newsprite = new PIXI.Mesh(square, new PIXI.MeshMaterial(PIXI.Texture.from("assets/tile.png"), { alpha: 1, tint: tile.color }))
+                var newsprite = new PIXI.Mesh(new PIXI.Geometry().addAttribute("positions", [0, 0, 12, 0, 12, 12, 0, 12], 2).addIndex([0, 1, 2, 0, 3, 2]), new PIXI.MeshMaterial(PIXI.Texture.from("assets/tile.png"), { alpha: 1, tint: tile.color }))
                 newsprite.x = x * (app.view.width / world.width) * 2
                 newsprite.y = y * (app.view.height / world.height) * 2
 
