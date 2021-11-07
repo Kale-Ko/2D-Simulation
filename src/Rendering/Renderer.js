@@ -1,3 +1,10 @@
+/**
+    @license
+    MIT License
+    Copyright (c) 2021 Kale Ko
+    See https://kaleko.ga/license.txt
+*/
+
 import Vector2 from "../Misc/Vector2.js"
 
 export default class Renderer {

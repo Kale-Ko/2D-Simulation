@@ -1,3 +1,10 @@
+/**
+    @license
+    MIT License
+    Copyright (c) 2021 Kale Ko
+    See https://kaleko.ga/license.txt
+*/
+
 export default class Tile {
     get name() { return "tile" }
     get type() { return "none" }

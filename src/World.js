@@ -1,3 +1,10 @@
+/**
+    @license
+    MIT License
+    Copyright (c) 2021 Kale Ko
+    See https://kaleko.ga/license.txt
+*/
+
 import AirTile from "./Tiles/Air.js"
 import Vector2 from "./Misc/Vector2.js"
 
