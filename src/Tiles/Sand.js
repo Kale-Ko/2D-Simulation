@@ -1,10 +1,3 @@
-/**
-    @license
-    MIT License
-    Copyright (c) 2021 Kale Ko
-    See https://kaleko.ga/license.txt
-*/
-
 import Tile from "./Tile.js"
 
 export default class SandTile extends Tile {

@@ -1,10 +1,3 @@
-/**
-    @license
-    MIT License
-    Copyright (c) 2021 Kale Ko
-    See https://kaleko.ga/license.txt
-*/
-
 import World from "./src/World.js"
 import Renderer from "./src/Rendering/Renderer.js"
 import PhysicsSystem from "./src/Physics/PhysicsSystem.js"
